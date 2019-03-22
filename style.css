@@ -1,0 +1,87 @@
+html { 
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Cardo', serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-left {
+    width: 15%;
+    height: 100%;
+    background-color: #2a2a2a;
+    color: #E9E9E9;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    
+}
+
+.title {
+    height: 15%;
+    width: 100%;
+    font-size: 3.4em;
+    text-align: center;
+
+}
+
+.form-login h2 {
+    /* insert cool code here 8) */
+}
+
+.page-nav {
+    list-style-type: none;
+    color: white;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    color: inherit;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.4em;
+    letter-spacing: .1em;
+    
+}
+
+li a:hover {
+    font-size: 1.5em;
+}
+
+
+
+/*container-right content*/
+.container-right {
+    width: 85%;
+    height: 50%;
+}
+
+.myslide {
+    height: 500px;
+    width: 100%;
+    display: none;
+    object-fit: cover;
+    background-color: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
