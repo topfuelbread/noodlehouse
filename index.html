@@ -2,47 +2,75 @@
 <html>
 	<head>
 		<title> Web Dev Noodle House </title>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<h1> Noodle House </h1>
-			</header>
-			<nav>
-				<ul class="page-nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="menu.php">Menu</a></li>
-					<li><a href="aboutus.php">About Us</a></li>
-					<li><a href="contactus.html">Contact Us</a></li>
-					<li><a href="reservation.php">Reservation</a></li
-				</ul>
-			</nav>
-			<div class="midsection">
+        
+		<div class="container-left">
+            <br>
+            <div class="title">Noodle House</div>
+            <div class="aside-block login">
+                <form class="form-login" action="#" method="POST">
+                        <h2>Login</h2>
+                        <p>
+                            <label for="username">Username</label>
+                            <input id="username" type="text" name="username"/>
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input id="password" type="password" name="password"/>
+                        </p>
+                        <button type = "submit">Login</button>
+                        <a class="button" href="/createaccount">Create Account</a>
+                    </form>
+            </div>
+            <br>
+            <div class="menu">
+                <nav>
+                    <ul class="page-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="menu.php">Menu</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="reservation.php">Reservation</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+        
+        <div class="container-right">
+                <div class="midsection-picture">
+                    <img class="myslide" src="http://runawayrice.com/wp-content/uploads/2017/11/Vietnamese-Beef-Noodle-Soup-Pho-Bo-Recipe.jpg">
+                    <img class="myslide" src="https://cms.splendidtable.org/sites/default/files/styles/w2000/public/Pho-Cookbook_Seafood-Pho-LEDE_0.jpg?itok=n5h7VTZG">
+                    <img class="myslide" src="http://aromasian.com/wp-content/uploads/2017/08/vietnamese-beef-noodle-Pho-Bo.jpg">
+                </div>
+            <script>
+                var ind= 0;
+                slideshow();
+
+                function slideshow(n) {
+                    var i;
+                    var x = document.getElementsByClassName("myslide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    
+                    ind++;
+                    if (ind > x.length) {ind = 1}    
+                    x[ind-1].style.display = "block";  
+                    setTimeout(slideshow, 4000);
+                }
+            </script>
+
+            
 				<main>
 					<article>
 						<h1> Welcome to Noodle House! </h1>
-						<p> Blah blah </p>
+						<p> The number one spot to order a taste of Vietnam's heavenly meals. Try out our famous pho noodle soups, or hop on in to get a freshly made salads! </p>
 					</article>
 				</main>
-				<aside>
-					<div class="aside-block login">
-						<form class="form-login" action="#" method="POST">
-							<h1>Login</h1>
-							<p>
-								<label for="username">Username</label>
-								<input id="username" type="text" name="username"/>
-							</p>
-							<p>
-								<label for="password">Password</label>
-								<input id="password" type="password" name="password"/>
-							</p>
-							<button type = "submit">Login</button>
-							<a class="button" href="/createaccount">Create Account</a>
-						</form>
-					</div>
-				</aside>
 			</div>
-		</div>
 	</body>
 </html>
