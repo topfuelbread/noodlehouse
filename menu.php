@@ -1,4 +1,12 @@
-<?php ?>
+
+<?php 
+
+//create a session for all the pages
+	session_start();
+
+?>
+
+
 <!--Menu page. Author: Heejeong Kim-->
 <!DOCTYPE html>
 <html>
@@ -14,7 +22,7 @@
 			</header>
 			<nav>
 				<ul class="page-nav">
-					<li><a href="/">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="menu.php">Menu</a></li>
 					<li><a href="aboutus.php">About Us</a></li>
 					<li><a href="contactus.html">Contact Us</a></li>
@@ -100,19 +108,24 @@
 				
 				<aside>
 					<div class="aside-block login">
-						<form class="form-login" action="#" method="POST">
-							<h1>Login</h1>
-							<p>
-								<label for="username">Username</label>
-								<input id="username" type="text" name="username"/>
-							</p>
-							<p>
-								<label for="password">Password</label>
-								<input id="password" type="password" name="password"/>
-							</p>
-							<button type = "submit">Login</button>
-							<a class="button" href="/createaccount">Create Account</a>
-						</form>
+					
+					
+					<?php
+				
+					if(isset($_SESSION['userid'])){
+			
+						echo '<form action="includes/logout.inc.php" method="post">
+
+							<button type="submit" name="logout-submit">Logout</button>
+				
+							</form>';
+			
+			
+					}
+				
+				?>
+				
+
 					</div>
 				</aside>
 			</div>
