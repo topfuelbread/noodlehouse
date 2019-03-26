@@ -3,8 +3,16 @@
 //create a session for all the pages
 	session_start();
 
-?>
 
+//if the user trys to open this page from url, send the user to homepage
+
+if(!isset($_SESSION['userid'])){
+	
+	header("Location: index.php");
+	
+}
+
+?>
 
 
 
