@@ -1,4 +1,30 @@
-html { 
+@keyframes mymove {
+  from {background-color: inherit;}
+  to {background-color: : gray;}
+}
+
+@keyframes fadeInDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+html {
     height: 100%;
     width: 100%;
 }
@@ -6,7 +32,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 1400px;
     width: 100%;
     font-family: 'Cardo', serif;
     display: flex;
@@ -15,13 +41,17 @@ body {
 
 .container-left {
     width: 15%;
-    height: 100%;
+    height: inherit;
     background-color: #2a2a2a;
     color: #E9E9E9;
+    padding-left: 1em;
+    padding-right: 1em;
     display: flex;
     flex-direction: column;
     min-width: 200px;
-    
+    position: sticky;
+    left: 0;
+
 }
 
 .title {
@@ -32,41 +62,55 @@ body {
 
 }
 
-.form-login h2 {
-    /* insert cool code here 8) */
+.aside-block login {
+  margin: 0;
+  padding: 0;
+}
+
+.form-login .button {
+  color: lightblue;
+
+}
+
+.menu {
+
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
 .page-nav {
-    list-style-type: none;
-    color: white;
-    float: left;
+    width: 100%;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-li a {
-    display: block;
-    color: inherit;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 1.4em;
-    letter-spacing: .1em;
-    
+.page-nav li a {
+  color: #E9E9E9;
+  font-size: 1.3em;
+  padding: .3em;
+  display: block;
+  padding 12px;
+  text-decoration: none;
 }
 
-li a:hover {
-    font-size: 1.5em;
+.page-nav li a:hover {
+  background-color: gray;
+  animation: mymove .15s 1;
 }
 
 
 
 /*container-right content*/
 .container-right {
-    width: 85%;
-    height: 50%;
+  width: 100%;
+  height: 50%;
 	font-size:1.3em;
 	text-indent: 15px;
 	text-align: left;
+
+
 }
 
 .myslide {
@@ -78,13 +122,16 @@ li a:hover {
 }
 
 
+main {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: inherit;
+  animation: fadeInDown 2s;
+}
 
-
-
-
-
-
-
-
-
-
+main article {
+  width: 33%;
+}
