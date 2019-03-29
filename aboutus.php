@@ -60,7 +60,7 @@
 								<text fill="#996688" font-size="40" x="50" y="90">
 									Noodle House
 								</text>
-							<svg>
+							</svg>
 						</div>
 						<p id="about-us-para">We are Windsor's number one noodle house, bringing the
 							 Vietnamese culture to this beautiful and prosperous city.
