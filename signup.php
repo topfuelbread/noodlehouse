@@ -30,10 +30,10 @@
 				<nav>
 					<ul class="page-nav">
 						<li><a href="/">Home</a></li>
-						<li><a href="menu.php">Menu</a></li>
-						<li><a href="aboutus.php">About Us</a></li>
-						<li><a href="contactus.html">Contact Us</a></li>
-						<li><a href="reservation.php">Reservation</a></li>
+						<li><a href="index.html">Home</a></li>
+                        			<li><a href="menu-index.html">Menu</a></li>
+                        			<li><a href="aboutus.php">About Us</a></li>
+                        			<li><a href="contactus.html">Contact Us</a></li>
 					</ul>
 				</nav>
 			</div>
